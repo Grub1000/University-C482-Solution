@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.managementsystem.AddProductController">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="900.0">
+         <children>
+            <VBox prefHeight="70.0" prefWidth="150.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: 13px arial; -fx-font-weight: bold;" text="Add Product" translateX="50.0" translateY="25.0" />
+               </children>
+            </VBox>
+            <TextField fx:id="addProductPartSearchTextField" maxWidth="170.0" minWidth="170.0" onAction="#handleProductPartSearch" translateX="540.0" translateY="15.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="400.0" prefWidth="900.0" translateY="50.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="450.0">
+               <children>
+                  <VBox prefHeight="50.0" prefWidth="100.0" />
+                  <HBox prefHeight="40.0" prefWidth="500.0">
+                     <children>
+                        <Label text="ID" translateX="66.0" translateY="4.0" />
+                        <TextField fx:id="productIDTextField" disable="true" maxWidth="105.0" promptText="Auto Gen- Disabled" style="-fx-font: 12px arial;" translateX="109.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Name" translateX="66.0" translateY="4.0" />
+                        <TextField fx:id="productNameTextField" maxWidth="105.0" promptText="Name" style="-fx-font: 12px arial;" translateX="89.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Inv" translateX="66.0" translateY="4.0" />
+                        <TextField fx:id="productInvTextField" maxWidth="105.0" promptText="Inventory" style="-fx-font: 12px arial;" translateX="105.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Price" translateX="66.0" translateY="4.0" />
+                        <TextField fx:id="productPriceTextField" maxWidth="105.0" promptText="Price/Cost" style="-fx-font: 12px arial;" translateX="95.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Max" translateX="66.0" translateY="4.0" />
+                        <TextField fx:id="productMaxTextField" maxWidth="105.0" promptText="Max" style="-fx-font: 12px arial;" translateX="98.0" />
+                        <Label text="Min" translateX="110.0" translateY="4.0" />
+                        <TextField fx:id="productMinTextField" maxWidth="105.0" promptText="Min" style="-fx-font: 12px arial;" translateX="120.0" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="productExceptionSection" prefHeight="200.0" prefWidth="100.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="400.0" prefWidth="450.0">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="380.0" translateX="28.0">
+                     <children>
+                        <TableView fx:id="addProductaddPartsTable" minWidth="380.0">
+                          <columns>
+                            <TableColumn fx:id="addProductaddPartsIdCol" maxWidth="60.0" prefWidth="75.0" text="Part ID" />
+                            <TableColumn fx:id="addProductaddPartsNameCol" maxWidth="90.0" minWidth="60.0" prefWidth="75.0" text="Part Name" />
+                              <TableColumn fx:id="addProductaddPartsInventoryLvlCol" maxWidth="100.0" minWidth="100.0" prefWidth="75.0" text="Inventory Level" />
+                              <TableColumn fx:id="addProductaddPartsPriceCostPerUnitCol" maxWidth="138.0" minWidth="138.0" prefWidth="75.0" text="Price/ Cost per Unit" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="50.0" prefWidth="450.0">
+                     <children>
+                        <Button fx:id="addProductaddPartsBtn" mnemonicParsing="false" onAction="#handleAddProductaddParts" text="Add" translateX="304.0" translateY="10.0" />
+                     </children></VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="380.0" translateX="28.0">
+                     <children>
+                        <TableView fx:id="addProductAssociatedPartsTable" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="addProductAssociatedPartsIdCol" maxWidth="60.0" prefWidth="75.0" text="Part ID" />
+                            <TableColumn fx:id="addProductAssociatedPartsNameCol" maxWidth="90.0" minWidth="60.0" prefWidth="75.0" text="Part Name" />
+                              <TableColumn fx:id="addProductAssociatedPartsInventoryLvlCol" maxWidth="100.0" minWidth="100.0" prefWidth="75.0" text="Inventory Level" />
+                              <TableColumn fx:id="addProductAssociatedPartsPriceCostPerUnitcol" maxWidth="138.0" minWidth="138.0" prefWidth="75.0" text="Price/ Cost per Unit" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="50.0" prefWidth="450.0">
+                     <children>
+                        <Button fx:id="addProductRmvAssociatedPartsBtn" mnemonicParsing="false" onAction="#handleAddProductRmvAssociatedParts" text="Remove Associated Part" translateX="244.0" translateY="10.0" />
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="40.0" prefWidth="450.0">
+                     <children>
+                        <Button fx:id="addProductSaveBtn" mnemonicParsing="false" onAction="#handleAddProductSaveBtn" text="Save" translateX="244.0" />
+                        <Button fx:id="addProductCancelBtn" mnemonicParsing="false" onAction="#handleAddProductCancel" text="Cancel" translateX="288.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></HBox>
+   </children>
+</Pane>

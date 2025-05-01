@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.managementsystem.MainController">
+   <children>
+      <HBox prefHeight="40.0" prefWidth="450.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: 13px arial; -fx-font-weight: bold;" text="Inventory Management System" translateX="18.0" translateY="16.0" />
+         </children>
+      </HBox>
+      <VBox layoutY="40.0" prefHeight="280.0" prefWidth="900.0">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints minWidth="450.0" prefWidth="450.0" />
+                <ColumnConstraints minWidth="450.0" prefWidth="450.0" />
+              </columnConstraints>
+               <children>
+                  <VBox prefHeight="280.0" prefWidth="450.0">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="400.0" style="-fx-background-color: transperant; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" translateX="32.0" translateY="5.0">
+                           <children>
+                              <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="400.0">
+                                 <children>
+                                    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="200.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: 11px arial; -fx-font-weight: bold;" text="Parts" translateX="24.0" translateY="17.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="partsSectionWindowSearchBar" maxWidth="-Infinity" minWidth="-Infinity" onAction="#partsSearchHandler" prefWidth="140.0" promptText="Search by Part ID or Name" style="-fx-font: 13px arial;" translateX="20.0" translateY="8.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="380.0" translateX="12.0">
+                                 <children>
+                                    <TableView fx:id="partsTable" minWidth="-Infinity" prefHeight="200.0" prefWidth="380.0">
+                                       <columns>
+                                          <TableColumn fx:id="partIdCol" maxWidth="60.0" prefWidth="60.0" text="Part ID" />
+                                          <TableColumn fx:id="partNameCol" maxWidth="90.0" minWidth="60.0" text="Part Name" />
+                                          <TableColumn fx:id="partInventoryLvlCol" maxWidth="100.0" minWidth="100.0" text="Inventory Level" />
+                                          <TableColumn fx:id="partPriceCostPerUnitCol" maxWidth="138.0" minWidth="138.0" text="Price/ Cost per Unit" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#handlePartAdd" text="Add" translateX="200.0" translateY="4.0" />
+                                    <Button fx:id="modifyButton" mnemonicParsing="false" onAction="#handlePartModify" text="Modify" translateX="206.0" translateY="4.0" />
+                                    <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handlePartDelete" text="Delete" translateX="226.0" translateY="4.0" />
+                                 </children></HBox>
+                           </children></VBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="280.0" prefWidth="450.0" GridPane.columnIndex="1">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="450.0">
+                           <children>
+                              <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="400.0" style="-fx-background-color: transperant; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" translateX="18.0" translateY="5.0">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="400.0">
+                                       <children>
+                                          <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="200.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: 11px arial; -fx-font-weight: bold;" text="Products" translateX="24.0" translateY="17.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="productsSectionWindowSearchBar" maxWidth="-Infinity" minWidth="-Infinity" onAction="#productsSearchHandler" prefWidth="140.0" promptText="Search by Product ID or Name" style="-fx-font: 13px arial;" translateX="20.0" translateY="8.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="380.0" translateX="12.0">
+                                       <children>
+                                          <TableView fx:id="productsTable" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="380.0">
+                                             <columns>
+                                                <TableColumn fx:id="productIdCol" maxWidth="60.0" text="Product ID" />
+                                                <TableColumn fx:id="productNameCol" maxWidth="90.0" minWidth="60.0" text="Product Name" />
+                                                <TableColumn fx:id="productInventoryLvlCol" maxWidth="100.0" minWidth="100.0" text="Inventory Level" />
+                                                <TableColumn fx:id="productPriceCostPerUnitCol" maxWidth="138.0" minWidth="138.0" text="Price/ Cost per Unit" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                    <HBox fx:id="productsSectionWindowBtnsWrapper" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="productAddButton" mnemonicParsing="false" onAction="#handleProductAdd" text="Add" translateX="200.0" translateY="4.0" />
+                                          <Button fx:id="productModifyButton" mnemonicParsing="false" onAction="#handleProductModify" text="Modify" translateX="206.0" translateY="4.0" />
+                                          <Button fx:id="productDeleteButton" mnemonicParsing="false" onAction="#handleProductDelete" text="Delete" translateX="226.0" translateY="4.0" />
+                                          <Text fx:id="productDeleteWithAssociatedExceptionText" strokeType="OUTSIDE" strokeWidth="0.0" text="This product has parts" translateY="40.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children></VBox>
+               </children>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </children></VBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="900.0" translateY="320.0">
+         <children>
+            <Button fx:id="exitMainPageButton" mnemonicParsing="false" onAction="#handleExitMainPage" text="Exit" translateX="770.0" translateY="4.0" />
+         </children></HBox>
+   </children>
+</Pane>

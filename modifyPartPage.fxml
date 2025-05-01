@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.managementsystem.ModifyPartController">
+    <children>
+        <VBox prefHeight="450.0" prefWidth="500.0">
+            <children>
+                <HBox minHeight="-Infinity" prefHeight="70.0" prefWidth="500.0">
+                    <children>
+                        <VBox prefHeight="70.0" prefWidth="150.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font: 13px arial; -fx-font-weight: bold;" text="Modify Part" translateX="50.0" translateY="25.0" />
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="70.0" prefWidth="115.0">
+                            <children>
+                                <RadioButton fx:id="modifyInHouseRB" mnemonicParsing="false" style="-fx-font: 11px arial;" text="In-House" translateY="25.0" />
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="70.0" prefWidth="120.0">
+                            <children>
+                                <RadioButton fx:id="modifyOutSourcedRB" mnemonicParsing="false" style="-fx-font: 11px arial;" text="Out-Sourced" translateY="25.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <VBox fx:id="modifyPartMidSection" prefHeight="216.0" prefWidth="500.0">
+                    <children>
+                        <HBox prefHeight="35.0" prefWidth="500.0">
+                            <children>
+                                <Label text="ID" translateX="66.0" translateY="4.0" />
+                                <TextField fx:id="modifyPartIDTextField" disable="true" maxWidth="105.0" promptText="Auto Gen- Disabled" style="-fx-font: 12px Arial;" translateX="144.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="500.0">
+                            <children>
+                                <Label text="Name" translateX="66.0" translateY="4.0" />
+                                <TextField fx:id="modifyPartNameTextField" maxWidth="105.0" promptText="Name" style="-fx-font: 12px arial;" translateX="124.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="500.0">
+                            <children>
+                                <Label text="Inv" translateX="66.0" translateY="4.0" />
+                                <TextField fx:id="modifyPartInvTextField" maxWidth="105.0" promptText="Inventory" style="-fx-font: 12px arial;" translateX="140.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="500.0">
+                            <children>
+                                <Label text="Price/Cost" translateX="66.0" translateY="4.0" />
+                                <TextField fx:id="modifyPartPriceTextField" maxWidth="105.0" promptText="Price/Cost" style="-fx-font: 12px arial;" translateX="102.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="500.0">
+                            <children>
+                                <Label text="Max" translateX="66.0" translateY="4.0" />
+                                <TextField fx:id="modifyPartMaxTextField" maxWidth="105.0" promptText="Max" style="-fx-font: 12px arial;" translateX="133.0" />
+                                <Label text="Min" translateX="150.0" translateY="4.0" />
+                                <TextField fx:id="modifyPartMinTextField" maxWidth="105.0" promptText="Min" style="-fx-font: 12px arial;" translateX="170.0" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="modifyPartMachineIDTextFieldWrapper" prefHeight="30.0" prefWidth="500.0">
+                            <children>
+                                <Label text="Machine ID" translateX="66.0" translateY="4.0" />
+                                <TextField fx:id="modifyPartMachineIDTextField" maxWidth="105.0" promptText="Machine ID" style="-fx-font: 12px arial;" translateX="95.0" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="modifyPartCompanyNameTextFieldWrapper" prefHeight="30.0" prefWidth="500.0">
+                            <children>
+                                <Label text="Company Name" translateX="66.0" translateY="4.0" />
+                                <TextField fx:id="modifyPartCompanyNameTextField" maxWidth="105.0" promptText="Company Name" style="-fx-font: 12px arial;" translateX="70.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <HBox prefHeight="60.0" prefWidth="500.0">
+                    <children>
+                        <Button fx:id="modifyPartSaveButton" mnemonicParsing="false" onAction="#handleModifyPartSave" text="Save" translateX="260.0" />
+                        <Button fx:id="modifyPartCancelButton" mnemonicParsing="false" onAction="#handleModifyPartCancel" text="Cancel" translateX="280.0" />
+                    </children>
+                </HBox>
+            <VBox fx:id="modifyPartExceptionSection" prefHeight="200.0" prefWidth="100.0" />
+            </children></VBox>
+    </children>
+</Pane>
